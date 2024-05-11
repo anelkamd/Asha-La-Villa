@@ -3,3 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+header {
+    display: flex;
+    justify-content: center;
+}
+header ul {
+    display: flex;
+    text-decoration: none;
+}
+header ul li {
+    text-transform: none;
+}
