@@ -10,6 +10,7 @@ header {
 header ul {
     display: flex;
     text-decoration: none;
+    margin-left: 20px;
 }
 header ul li {
     text-transform: none;
