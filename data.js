@@ -35,19 +35,19 @@ export const previews = [
     },
     {
         Img: "./image/5.jpg",
-        title: "Acceuille",
+        title: "Salle de sport",
         tags: "Votre hotel de luxe de goma...",
         description: "Soyez le bienvenue dans notre hotel, une belle vue a cote du lac"
     },
     {
         Img: "./image/6.jpg",
-        title: "Acceuille",
+        title: "Meditation",
         tags: "Votre hotel de luxe de goma...",
         description: "Soyez le bienvenue dans notre hotel, une belle vue a cote du lac"
     },
     {
         Img: "./image/7.jpg",
-        title: "Acceuille",
+        title: "Salle de jeux",
         tags: "Votre hotel de luxe de goma...",
         description: "Soyez le bienvenue dans notre hotel, une belle vue a cote du lac"
     },
