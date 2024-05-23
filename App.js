@@ -15,17 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
      const variantTransform = {
         "variant-1": {
-            tittle: {x: 75, opacity: 0},
+            title: {x: 75, opacity: 0},
             tags: { y: -75, opacity: 0},
             description: {x: -75, opacity: 0}
         },
         "variant-2": {
-            tittle: {x: -75, opacity: 0},
+            title: {x: -75, opacity: 0},
             tags: { y: -75, opacity: 0},
             description: {x: 75, opacity: 0}
         },
         "variant-3": {
-            tittle: {x: 75, opacity: 0},
+            title: {x: 75, opacity: 0},
             tags: { y: 75, opacity: 0},
             description: {x: 75, opacity: 0}
         },
@@ -80,4 +80,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
      }
+
+     previews.forEach((preview, index) => {
+        const previewElement = document.createElement(".div");
+        previewElement.className = `preview ${mesClasse[index]} preview-${index + 1}`;
+        previewElement.innerHTML = `
+        <div class="preview-img"> <img src="${preview.img}" alt="" /></div>
+        <div class="preview-title"> <h1>${preview.title}</h1></div>
+        <div class="preview-tags"> <p>${preview.tags}</p></div>
+        <div class="preview-description"> <p>${preview.description}</p></div>
+        `;
+        
+     })
 })
