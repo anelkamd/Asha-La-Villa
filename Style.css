@@ -128,3 +128,29 @@
     background: black;
     overflow: hidden;
   }
+
+  nav {
+    position: fixed;
+    width: 100vw;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+
+  nav p, footer p {
+    color: aliceblue;
+    font-size: 12px;
+  }
+
+  nav > div {
+    flex: 1;
+  }
+
+  .menu-btn p {
+    width: max-content;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    backdrop-filter: blur(20px);
+    padding: 6px 12px;
+  }
