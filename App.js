@@ -90,6 +90,31 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="preview-tags"> <p>${preview.tags}</p></div>
         <div class="preview-description"> <p>${preview.description}</p></div>
         `;
-        
+            container.appendChild(previewElement);
+            applyVariantStyle(previewElement);
+     });
+
+     items.forEach((item, index) => {
+        item.addEventListener(Mouseenter , () => {
+            isMouseOverItem = true;
+            const newBg = `./image-${index + 1}.jpg`;
+            changeBg(newBg);
+
+            const newaActivePreview = document.querySelector(`.preview-${index + 1}`);
+            if (activePreview && activePreview != newaActivePreview) {
+                const previousActivePreviewImg = activePreview.querySelector(".preview-img");
+                const previousDefaultClipPath = getDefautlClipPach(activePreview);
+                gsap.to(previousActivePreviewImg, {
+                    clipaPath: previousDefaultClipPath,
+                    duration:0.75,
+                    ease: "power3.out",
+                });
+                gsap.to(activePreview , {
+                    opacity: "0",
+                    duration: "0.3",
+                    delai: 0.2
+                })
+            }
+        })
      })
 })
