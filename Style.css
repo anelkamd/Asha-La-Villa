@@ -125,7 +125,7 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: black;
+    /*background: black;*/
     overflow: hidden;
   }
 
@@ -161,5 +161,56 @@
   }
 
   .local-time {
-    
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .items {
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    padding:  0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .item {
+    max-width: max-content;
+    padding:  o.25rem 0;
+    cursor: pointer;
+  }
+  .item p {
+    margin: 5px;
+    color: aliceblue;
+    padding: 6px 12px;
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid  rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    backdrop-filter: blur(20px);
+    transition: 0.3ms;
+  }
+  .item p:hover {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
