@@ -3,16 +3,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-header {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-header ul {
-    display: flex;
-    text-decoration: none;
-    margin-left: 20px;
-}
-header ul li {
-    text-transform: none;
-}
