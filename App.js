@@ -66,7 +66,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         previewBg.appendChild(newImg);
 
-        gsap.to(newImg, { opacity: 1, duration: 0.5})
+        gsap.to(newImg, { opacity: 1, duration: 0.5});
+
+        if (previewBg.children.length > 1) {
+            const oldImg = previewBg .children[0];
+            gsap.to(oldImg, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    previewBg.removeChild(oldImg)
+                },
+            });
+        }
 
      }
 })
