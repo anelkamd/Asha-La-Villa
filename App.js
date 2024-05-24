@@ -113,8 +113,58 @@ document.addEventListener('DOMContentLoaded', function() {
                     opacity: "0",
                     duration: "0.3",
                     delai: 0.2
-                })
+                });
+                gsap.to(newaActivePreview, {
+                    opacity: 1,
+                    duration: 0.1
+                });
+                activePreview = newaActivePreview;
+
+                const elementToAnimate = ["title", "tags", "description"];
+                elementToAnimate.forEach((el) => {
+                    const element = newaActivePreview.querySelector(`.preview-${el}`);
+                    if (element) {
+                        gsap.to(element, {x: 0, y: 0, opacity: 1, duration: 0.5});
+                    };
+                });
+
+                const activePreviewImg = activePreview.querySelector(".preview-img");
+                gsap.to(activePreviewImg, {
+                    clipaPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                    duration: 1,
+                    ease: "power3.out"
+                });
             }
         })
      })
-})
+     items.addEventListener(mouseleave, () => {
+        isMouseOverItem = false;
+        applyVariantStyle(activePreview, true);
+
+        setTimeout (() => {
+            if (!isMouseOverItem) {
+                changeBg("./image/bg.jpg");
+                if (activePreview) {
+                    gsap.to(activePreview , {
+                        opacity: 0,
+                        duration: 0.1,
+                    });
+                    const defaultPreview = document.querySelector(".preview-default");
+                    gsap.to(defaultPreview, {
+                        opacity: 1,
+                        duration: 0.1,
+                    });
+                    activePreview = defaultPreview;
+
+                    const activePreview = activePreview.querySelector(".preview-img");
+                    const defaultClipPash = getDefautlClipPach(activePreview);
+                    gsap.to(defaultClipPash, {
+                        clipaPath: defaultClipPash,
+                        duration: 1,
+                        ease: "power3.out"
+                    });
+                }
+            }
+        }, 10 )
+     });
+});
