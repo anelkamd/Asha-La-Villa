@@ -111,9 +111,7 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 1;
     color: #fff;
-    z-index: 0;
   }
   .preview-bg {
     position: absolute;
